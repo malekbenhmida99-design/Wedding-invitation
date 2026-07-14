@@ -426,7 +426,7 @@ body {
 
 .location-section {
     text-align: center;
-    margin: 35px 0;
+    margin: 35px 0 22px;
 }
 
 .venue {
@@ -452,16 +452,17 @@ body {
     border-bottom-color: #4a372f;
 }
 
-.message-section {
-    text-align: center;
-    margin: 30px 0;
+.rings-section {
+    display: flex;
+    justify-content: center;
+    margin: 18px 0 8px;
 }
 
-.reception-line {
-    font-size: 13px;
-    color: #7a6457;
-    letter-spacing: 1px;
-    font-style: italic;
+.rings-icon {
+    width: 130px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(111, 83, 69, 0.16));
+    opacity: 0.95;
 }
 
 .floral-bottom {
@@ -577,6 +578,10 @@ body {
         height: 80px;
     }
 
+    .rings-icon {
+        width: 112px;
+    }
+
     .flower-large {
         width: 100px;
         height: 100px;
@@ -643,5 +648,9 @@ body {
     .envelope-couple-names {
         font-size: 16px;
         letter-spacing: 1.5px;
+    }
+
+    .rings-icon {
+        width: 96px;
     }
 }

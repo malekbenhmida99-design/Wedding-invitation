@@ -8,9 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="invitation-page">
+    <!-- ENVELOPE PAGE -->
+    <div id="envelope-section" class="envelope-section active">
+        <div class="envelope-container">
+            <div class="envelope">
+                <!-- Envelope Back -->
+                <div class="envelope-back"></div>
+                
+                <!-- Envelope Front -->
+                <div class="envelope-front">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="envelope-text" id="envelope-text">
+                            <h1>Wedding Invitation</h1>
+                            <p>Malek & Rihem</p>
+                        </div>
+                        
+                        <!-- Stamp -->
+                        <div class="stamp" onclick="openInvitation()">
+                            <div class="stamp-content" id="stamp-text">
+                                <p>CLICK</p>
+                                <p>TO OPEN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INVITATION PAGE -->
+    <div id="invitation-section" class="invitation-section">
         <div class="invitation-header">
-            <button class="back-btn" onclick="goBack()">← Back</button>
+            <button class="back-btn" onclick="backToEnvelope()">← Back</button>
         </div>
 
         <!-- ENGLISH VERSION -->

@@ -8,30 +8,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- ENVELOPE PAGE -->
     <div id="envelope-section" class="envelope-section active">
-        <div class="envelope-container">
-            <div class="envelope">
-                <div class="envelope-back"></div>
-                <div class="envelope-front">
-                    <div class="envelope-flap"></div>
-                    <div class="envelope-body">
-                        <div class="envelope-text" id="envelope-text">
-                            <h1>Wedding Invitation</h1>
-                            <p>Malek & Rihem</p>
+        <div class="envelope-stage">
+            <div class="envelope-language-bar">
+                <div class="language-toggle" aria-label="Language switcher">
+                    <button type="button" id="english-toggle-envelope" class="lang-toggle-btn active" onclick="setLanguage('english')">English</button>
+                    <button type="button" id="arabic-toggle-envelope" class="lang-toggle-btn" onclick="setLanguage('arabic')">العربية</button>
+                </div>
+            </div>
+
+            <div class="envelope-container">
+                <div class="envelope">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-front">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-text" id="envelope-text">
+                                <h1>Wedding Invitation</h1>
+                                <p>Malek & Rihem</p>
+                            </div>
+                            <button class="seal-stamp" type="button" onclick="openInvitation()" aria-label="Open invitation">
+                                <span class="seal-inner">
+                                    <span class="seal-monogram">M &amp; R</span>
+                                </span>
+                            </button>
                         </div>
-                        <button class="seal-stamp" type="button" onclick="openInvitation()" aria-label="Open invitation">
-                            <span class="seal-inner">
-                                <span class="seal-monogram">M&nbsp;&amp;&nbsp;R</span>
-                            </span>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- INVITATION PAGE -->
     <div id="invitation-section" class="invitation-section">
         <div class="invitation-header">
             <div class="top-controls">
@@ -77,44 +84,14 @@
                     </div>
                     <div class="floral-bottom">
                         <div class="flower-group left">
-                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/>
-                                <circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/>
-                                <circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/>
-                                <circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/>
-                                <circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/>
-                            </svg>
-                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/>
-                                <circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/>
-                                <circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/>
-                                <circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/>
-                            </svg>
-                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="30" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(-30 30 40)"/>
-                                <ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(20 50 60)"/>
-                                <ellipse cx="20" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(-40 20 100)"/>
-                            </svg>
+                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/><circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/><circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/><circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/><circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/></svg>
+                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg"><circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/><circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/><circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/><circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/></svg>
+                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(-30 30 40)"/><ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(20 50 60)"/><ellipse cx="20" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(-40 20 100)"/></svg>
                         </div>
                         <div class="flower-group right">
-                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/>
-                                <circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/>
-                                <circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/>
-                                <circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/>
-                                <circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/>
-                            </svg>
-                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/>
-                                <circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/>
-                                <circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/>
-                                <circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/>
-                            </svg>
-                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="70" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(30 70 40)"/>
-                                <ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(-20 50 60)"/>
-                                <ellipse cx="80" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(40 80 100)"/>
-                            </svg>
+                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/><circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/><circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/><circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/><circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/></svg>
+                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg"><circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/><circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/><circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/><circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/></svg>
+                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><ellipse cx="70" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(30 70 40)"/><ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(-20 50 60)"/><ellipse cx="80" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(40 80 100)"/></svg>
                         </div>
                     </div>
                     <div class="decorative-corner bottom-left"></div>
@@ -157,44 +134,14 @@
                     </div>
                     <div class="floral-bottom">
                         <div class="flower-group left">
-                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/>
-                                <circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/>
-                                <circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/>
-                                <circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/>
-                                <circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/>
-                            </svg>
-                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/>
-                                <circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/>
-                                <circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/>
-                                <circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/>
-                            </svg>
-                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="30" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(-30 30 40)"/>
-                                <ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(20 50 60)"/>
-                                <ellipse cx="20" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(-40 20 100)"/>
-                            </svg>
+                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/><circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/><circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/><circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/><circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/></svg>
+                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg"><circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/><circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/><circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/><circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/></svg>
+                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(-30 30 40)"/><ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(20 50 60)"/><ellipse cx="20" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(-40 20 100)"/></svg>
                         </div>
                         <div class="flower-group right">
-                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/>
-                                <circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/>
-                                <circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/>
-                                <circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/>
-                                <circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/>
-                            </svg>
-                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/>
-                                <circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/>
-                                <circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/>
-                                <circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/>
-                            </svg>
-                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="70" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(30 70 40)"/>
-                                <ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(-20 50 60)"/>
-                                <ellipse cx="80" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(40 80 100)"/>
-                            </svg>
+                            <svg class="flower-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="45" fill="#d4a5a5" opacity="0.6"/><circle cx="85" cy="85" r="30" fill="#e8b8b8" opacity="0.7"/><circle cx="115" cy="85" r="30" fill="#d4a5a5" opacity="0.8"/><circle cx="100" cy="60" r="25" fill="#e8c8c8" opacity="0.7"/><circle cx="100" cy="130" r="28" fill="#d9a5a5" opacity="0.6"/></svg>
+                            <svg class="flower-small" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg"><circle cx="75" cy="75" r="35" fill="#a8d4e0" opacity="0.5"/><circle cx="65" cy="65" r="22" fill="#b8d4e0" opacity="0.6"/><circle cx="85" cy="65" r="22" fill="#98c4d0" opacity="0.7"/><circle cx="75" cy="50" r="20" fill="#a8d4e0" opacity="0.8"/></svg>
+                            <svg class="leaves" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><ellipse cx="70" cy="40" rx="12" ry="30" fill="#9fb3cc" opacity="0.5" transform="rotate(30 70 40)"/><ellipse cx="50" cy="60" rx="10" ry="28" fill="#a8c4d0" opacity="0.5" transform="rotate(-20 50 60)"/><ellipse cx="80" cy="100" rx="11" ry="32" fill="#8fa3c4" opacity="0.4" transform="rotate(40 80 100)"/></svg>
                         </div>
                     </div>
                     <div class="decorative-corner bottom-left"></div>

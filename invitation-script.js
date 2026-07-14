@@ -1,34 +1,40 @@
 let selectedLanguage = localStorage.getItem('selectedLanguage') || 'english';
 
+function toggleButtonState(id, isActive) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.toggle('active', isActive);
+}
+
 function updateLanguageUI() {
     const englishContent = document.getElementById('english-content');
     const arabicContent = document.getElementById('arabic-content');
-    const englishToggle = document.getElementById('english-toggle');
-    const arabicToggle = document.getElementById('arabic-toggle');
     const envelopeText = document.getElementById('envelope-text');
+    const sealMonogram = document.querySelector('.seal-monogram');
 
-    if (selectedLanguage === 'arabic') {
-        document.documentElement.dir = 'rtl';
-        document.documentElement.lang = 'ar';
-        englishContent.classList.remove('active');
-        arabicContent.classList.add('active');
-        englishToggle.classList.remove('active');
-        arabicToggle.classList.add('active');
-        envelopeText.innerHTML = `
-            <h1>دعوة الزفاف</h1>
-            <p>مالك و ريهام</p>
-        `;
-    } else {
-        document.documentElement.dir = 'ltr';
-        document.documentElement.lang = 'en';
-        englishContent.classList.add('active');
-        arabicContent.classList.remove('active');
-        englishToggle.classList.add('active');
-        arabicToggle.classList.remove('active');
-        envelopeText.innerHTML = `
-            <h1>Wedding Invitation</h1>
-            <p>Malek & Rihem</p>
-        `;
+    const isArabic = selectedLanguage === 'arabic';
+
+    document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+    document.documentElement.lang = isArabic ? 'ar' : 'en';
+
+    if (englishContent && arabicContent) {
+        englishContent.classList.toggle('active', !isArabic);
+        arabicContent.classList.toggle('active', isArabic);
+    }
+
+    toggleButtonState('english-toggle', !isArabic);
+    toggleButtonState('arabic-toggle', isArabic);
+    toggleButtonState('english-toggle-envelope', !isArabic);
+    toggleButtonState('arabic-toggle-envelope', isArabic);
+
+    if (envelopeText) {
+        envelopeText.innerHTML = isArabic
+            ? '<h1>دعوة الزفاف</h1><p>مالك و ريهام</p>'
+            : '<h1>Wedding Invitation</h1><p>Malek & Rihem</p>';
+    }
+
+    if (sealMonogram) {
+        sealMonogram.textContent = isArabic ? 'ر & م' : 'M & R';
     }
 }
 
@@ -39,22 +45,16 @@ function setLanguage(lang) {
 }
 
 function openInvitation() {
-    const envelopeSection = document.getElementById('envelope-section');
-    const invitationSection = document.getElementById('invitation-section');
-
-    envelopeSection.classList.remove('active');
-    invitationSection.classList.add('active');
+    document.getElementById('envelope-section').classList.remove('active');
+    document.getElementById('invitation-section').classList.add('active');
     updateLanguageUI();
     window.scrollTo(0, 0);
 }
 
 function backToEnvelope() {
-    const envelopeSection = document.getElementById('envelope-section');
-    const invitationSection = document.getElementById('invitation-section');
-
-    invitationSection.classList.remove('active');
-    envelopeSection.classList.add('active');
+    document.getElementById('invitation-section').classList.remove('active');
+    document.getElementById('envelope-section').classList.add('active');
     window.scrollTo(0, 0);
 }
 
-updateLanguageUI();
+document.addEventListener('DOMContentLoaded', updateLanguageUI);

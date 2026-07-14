@@ -47,7 +47,7 @@ body {
 }
 
 .invitation-container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -57,47 +57,50 @@ body {
 
 .invitation-card {
     background: #fcfbf9;
-    border-radius: 10px;
-    padding: 60px 50px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 60px 50px 80px 50px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
     position: relative;
+    max-width: 750px;
     overflow: visible;
-    max-width: 700px;
 }
 
-.corner {
+/* Decorative corners */
+.decorative-corner {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    opacity: 0.6;
+    width: 120px;
+    height: 120px;
+    opacity: 0.4;
 }
 
-.corner-top-left {
-    top: 10px;
-    left: 10px;
+.decorative-corner.top-left {
+    top: -20px;
+    left: -20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M20,100 Q30,90 40,80 Q50,70 60,60 Q70,50 80,40 Q90,30 100,25" fill="none" stroke="%238fa3c4" stroke-width="2" opacity="0.5"/><path d="M30,110 Q40,100 50,90 Q60,80 70,70" fill="none" stroke="%238fa3c4" stroke-width="1.5" opacity="0.4"/><circle cx="40" cy="75" r="3" fill="%238fa3c4" opacity="0.6"/><circle cx="60" cy="55" r="2.5" fill="%238fa3c4" opacity="0.5"/></svg>') no-repeat;
+    background-size: contain;
 }
 
-.corner-top-right {
-    top: 10px;
-    right: 10px;
-    transform: scaleX(-1);
+.decorative-corner.top-right {
+    top: -20px;
+    right: -20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M100,100 Q90,90 80,80 Q70,70 60,60 Q50,50 40,40 Q30,30 20,25" fill="none" stroke="%238fa3c4" stroke-width="2" opacity="0.5"/><path d="M90,110 Q80,100 70,90 Q60,80 50,70" fill="none" stroke="%238fa3c4" stroke-width="1.5" opacity="0.4"/><circle cx="80" cy="75" r="3" fill="%238fa3c4" opacity="0.6"/><circle cx="60" cy="55" r="2.5" fill="%238fa3c4" opacity="0.5"/></svg>') no-repeat;
+    background-size: contain;
 }
 
-.corner-bottom-left {
-    bottom: 10px;
-    left: 10px;
+.decorative-corner.bottom-left {
+    bottom: -20px;
+    left: -20px;
     transform: scaleY(-1);
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M20,100 Q30,90 40,80 Q50,70 60,60 Q70,50 80,40 Q90,30 100,25" fill="none" stroke="%238fa3c4" stroke-width="2" opacity="0.5"/><path d="M30,110 Q40,100 50,90 Q60,80 70,70" fill="none" stroke="%238fa3c4" stroke-width="1.5" opacity="0.4"/><circle cx="40" cy="75" r="3" fill="%238fa3c4" opacity="0.6"/><circle cx="60" cy="55" r="2.5" fill="%238fa3c4" opacity="0.5"/></svg>') no-repeat;
+    background-size: contain;
 }
 
-.corner-bottom-right {
-    bottom: 10px;
-    right: 10px;
+.decorative-corner.bottom-right {
+    bottom: -20px;
+    right: -20px;
     transform: scaleX(-1) scaleY(-1);
-}
-
-.corner svg {
-    width: 100%;
-    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M100,100 Q90,90 80,80 Q70,70 60,60 Q50,50 40,40 Q30,30 20,25" fill="none" stroke="%238fa3c4" stroke-width="2" opacity="0.5"/><path d="M90,110 Q80,100 70,90 Q60,80 50,70" fill="none" stroke="%238fa3c4" stroke-width="1.5" opacity="0.4"/><circle cx="80" cy="75" r="3" fill="%238fa3c4" opacity="0.6"/><circle cx="60" cy="55" r="2.5" fill="%238fa3c4" opacity="0.5"/></svg>') no-repeat;
+    background-size: contain;
 }
 
 .content {
@@ -137,47 +140,22 @@ body {
 }
 
 .divider {
-    width: 80px;
+    width: 100px;
     height: 2px;
     background: linear-gradient(90deg, transparent, #c9b5a0, transparent);
 }
 
-.groom-name {
-    font-size: 48px;
+.couple-names {
+    font-size: 52px;
     color: #5a5a5a;
     font-weight: 300;
-    letter-spacing: 2px;
-    font-style: italic;
-}
-
-.and {
-    font-size: 24px;
-    color: #8fa3c4;
-    margin: 10px 0;
-}
-
-.bride-name {
-    font-size: 48px;
-    color: #5a5a5a;
-    font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-style: italic;
 }
 
 .date-section {
     text-align: center;
     margin: 50px 0 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
-.date-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #d4a5a5, transparent);
-    max-width: 80px;
 }
 
 .date-info {
@@ -185,6 +163,10 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    background: linear-gradient(135deg, rgba(212, 165, 165, 0.05) 0%, rgba(143, 163, 196, 0.05) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(201, 181, 160, 0.2);
 }
 
 .date-day {
@@ -196,7 +178,7 @@ body {
 }
 
 .date-number {
-    font-size: 48px;
+    font-size: 56px;
     color: #c9b5a0;
     font-weight: 400;
     line-height: 1;
@@ -225,14 +207,14 @@ body {
 
 .location-section {
     text-align: center;
-    margin: 40px 0;
+    margin: 35px 0;
 }
 
 .venue {
-    font-size: 18px;
+    font-size: 20px;
     color: #5a5a5a;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-bottom: 12px;
 }
 
@@ -241,7 +223,7 @@ body {
     color: #8fa3c4;
     text-decoration: none;
     font-size: 13px;
-    border-bottom: 1px solid #8fa3c4;
+    border-bottom: 2px solid #8fa3c4;
     transition: all 0.3s ease;
     padding-bottom: 3px;
 }
@@ -264,11 +246,11 @@ body {
 }
 
 .rsvp-section {
-    background: linear-gradient(135deg, rgba(143, 163, 196, 0.05) 0%, rgba(212, 165, 165, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(143, 163, 196, 0.08) 0%, rgba(212, 165, 165, 0.08) 100%);
     padding: 35px;
-    border-radius: 8px;
-    margin-top: 50px;
-    border: 1px solid rgba(143, 163, 196, 0.1);
+    border-radius: 10px;
+    margin-top: 45px;
+    border: 1px solid rgba(201, 181, 160, 0.15);
 }
 
 .rsvp-section h3 {
@@ -299,17 +281,17 @@ body {
 .rsvp-section textarea {
     padding: 12px 15px;
     border: 1px solid #d4a5a5;
-    border-radius: 4px;
+    border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     color: #5a5a5a;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     transition: all 0.3s ease;
 }
 
 .rsvp-section input::placeholder,
 .rsvp-section textarea::placeholder {
-    color: #b8b8b8;
+    color: #c0c0c0;
 }
 
 .rsvp-section input:focus,
@@ -318,15 +300,15 @@ body {
     outline: none;
     border-color: #8fa3c4;
     background: white;
-    box-shadow: 0 0 8px rgba(143, 163, 196, 0.15);
+    box-shadow: 0 0 10px rgba(143, 163, 196, 0.2);
 }
 
 .submit-btn {
     background: linear-gradient(135deg, #8fa3c4 0%, #7a8db3 100%);
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 4px;
+    padding: 13px;
+    border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
     font-size: 13px;
@@ -339,33 +321,66 @@ body {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(143, 163, 196, 0.3);
+    box-shadow: 0 8px 20px rgba(143, 163, 196, 0.35);
 }
 
-.flower-bottom {
+/* Floral Decorations */
+.floral-bottom {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    opacity: 0.7;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
 }
 
-.flower {
+.flower-group {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.flower-group.left {
+    left: -30px;
+}
+
+.flower-group.right {
+    right: -30px;
+}
+
+.flower-large {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    bottom: 0;
+}
+
+.flower-small {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: 20px;
+}
+
+.leaves {
+    position: absolute;
     width: 80px;
-    height: 80px;
+    height: 120px;
 }
 
 @media (max-width: 600px) {
     .invitation-card {
-        padding: 40px 25px;
+        padding: 40px 25px 70px 25px;
     }
 
-    .groom-name,
-    .bride-name {
-        font-size: 36px;
+    .couple-names {
+        font-size: 40px;
     }
 
     .date-number {
-        font-size: 40px;
+        font-size: 48px;
     }
 
     .cordial {
@@ -380,29 +395,37 @@ body {
         padding: 25px;
     }
 
-    .flower {
-        width: 60px;
-        height: 60px;
+    .venue {
+        font-size: 18px;
     }
 
-    .corner {
-        width: 60px;
-        height: 60px;
+    .decorative-corner {
+        width: 80px;
+        height: 80px;
+    }
+
+    .flower-large {
+        width: 100px;
+        height: 100px;
+    }
+
+    .flower-small {
+        width: 70px;
+        height: 70px;
     }
 }
 
 @media (max-width: 400px) {
     .invitation-card {
-        padding: 30px 15px;
+        padding: 30px 15px 60px 15px;
     }
 
-    .groom-name,
-    .bride-name {
-        font-size: 28px;
+    .couple-names {
+        font-size: 32px;
     }
 
     .date-number {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .names-section {

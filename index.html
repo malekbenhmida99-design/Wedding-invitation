@@ -5,135 +5,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malek & Rihem Wedding Invitation</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="language-toggle">
         <button id="langBtn" onclick="toggleLanguage()">العربية | English</button>
     </div>
 
+    <!-- ENGLISH VERSION -->
     <div id="english-content" class="language-content active">
-        <div class="container">
+        <div class="invitation-container">
             <div class="invitation-card">
-                <div class="header">
-                    <div class="decorative-top"></div>
-                    <h1 class="title">Wedding Invitation</h1>
-                    <p class="subtitle">We are delighted to invite you to celebrate our wedding</p>
+                <!-- Decorative Corners -->
+                <div class="corner corner-top-left">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20,80 Q30,70 40,60 Q35,50 30,40 Q20,50 10,60 Q5,70 20,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <path d="M40,40 Q50,35 60,30 Q55,25 50,20 Q40,25 30,30 Q35,35 40,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <circle cx="25" cy="35" r="2" fill="#8fa3c4"/>
+                        <circle cx="35" cy="50" r="2.5" fill="#8fa3c4"/>
+                    </svg>
+                </div>
+                <div class="corner corner-top-right">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80,80 Q70,70 60,60 Q65,50 70,40 Q80,50 90,60 Q95,70 80,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <path d="M60,40 Q50,35 40,30 Q45,25 50,20 Q60,25 70,30 Q65,35 60,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <circle cx="75" cy="35" r="2" fill="#8fa3c4"/>
+                        <circle cx="65" cy="50" r="2.5" fill="#8fa3c4"/>
+                    </svg>
+                </div>
+                <div class="corner corner-bottom-left">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(180 50 50)">
+                            <path d="M20,80 Q30,70 40,60 Q35,50 30,40 Q20,50 10,60 Q5,70 20,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <path d="M40,40 Q50,35 60,30 Q55,25 50,20 Q40,25 30,30 Q35,35 40,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <circle cx="25" cy="35" r="2" fill="#8fa3c4"/>
+                            <circle cx="35" cy="50" r="2.5" fill="#8fa3c4"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="corner corner-bottom-right">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(180 50 50)">
+                            <path d="M80,80 Q70,70 60,60 Q65,50 70,40 Q80,50 90,60 Q95,70 80,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <path d="M60,40 Q50,35 40,30 Q45,25 50,20 Q60,25 70,30 Q65,35 60,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <circle cx="75" cy="35" r="2" fill="#8fa3c4"/>
+                            <circle cx="65" cy="50" r="2.5" fill="#8fa3c4"/>
+                        </g>
+                    </svg>
                 </div>
 
-                <div class="names-section">
-                    <div class="name-line"></div>
-                    <h2 class="couple-names">Malek & Rihem</h2>
-                    <div class="name-line"></div>
-                </div>
-
-                <div class="details-section">
-                    <div class="detail-item">
-                        <span class="detail-label">📅 Date</span>
-                        <span class="detail-value">Monday, August 17, 2026</span>
+                <!-- Main Content -->
+                <div class="content">
+                    <div class="header-text">
+                        <p class="cordial">YOU ARE CORDIALLY INVITED TO</p>
+                        <p class="ceremony">THE WEDDING OF</p>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">⏰ Time</span>
-                        <span class="detail-value">9:00 PM</span>
+
+                    <div class="names-section">
+                        <div class="divider"></div>
+                        <h1 class="groom-name">Malek Shah</h1>
+                        <p class="and">&</p>
+                        <h1 class="bride-name">Rihem Devi</h1>
+                        <div class="divider"></div>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">📍 Location</span>
-                        <span class="detail-value">Haifa Palace</span>
+
+                    <div class="date-section">
+                        <div class="date-line"></div>
+                        <div class="date-info">
+                            <p class="date-day">MONDAY</p>
+                            <p class="date-number">17</p>
+                            <p class="date-month">AUGUST</p>
+                            <p class="date-year">2026</p>
+                            <p class="date-time">AT 9:00 PM</p>
+                        </div>
+                        <div class="date-line"></div>
+                    </div>
+
+                    <div class="location-section">
+                        <p class="venue">Haifa Palace</p>
+                        <a href="https://maps.app.goo.gl/m9n8pzfaNcvFnZn8A" target="_blank" class="map-link">📍 View Location</a>
+                    </div>
+
+                    <div class="message-section">
+                        <p class="reception-line">Reception to follow</p>
+                    </div>
+
+                    <!-- RSVP Section -->
+                    <div class="rsvp-section">
+                        <h3>RSVP</h3>
+                        <p>Please confirm your attendance by August 10, 2026</p>
+                        <form id="rsvpForm" onsubmit="handleRSVP(event)">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                            <select required>
+                                <option value="">Will you attend?</option>
+                                <option value="yes">Yes, I will attend</option>
+                                <option value="no">No, I cannot attend</option>
+                                <option value="maybe">Maybe</option>
+                            </select>
+                            <input type="number" placeholder="Number of Guests" min="1" max="5" required>
+                            <textarea placeholder="Special dietary requirements or message" rows="3"></textarea>
+                            <button type="submit" class="submit-btn">Submit RSVP</button>
+                        </form>
                     </div>
                 </div>
 
-                <div class="map-section">
-                    <a href="https://maps.app.goo.gl/m9n8pzfaNcvFnZn8A" target="_blank" class="map-link">View on Google Maps →</a>
-                </div>
-
-                <div class="message-section">
-                    <p class="message">Your presence is kindly requested at our wedding celebration</p>
-                </div>
-
-                <div class="rsvp-section">
-                    <h3>RSVP</h3>
-                    <p>Please confirm your attendance</p>
-                    <form id="rsvpForm" onsubmit="handleRSVP(event)">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <select required>
-                            <option value="">Will you attend?</option>
-                            <option value="yes">Yes, I will attend</option>
-                            <option value="no">No, I cannot attend</option>
-                            <option value="maybe">Maybe</option>
-                        </select>
-                        <input type="number" placeholder="Number of guests" min="1" max="5" required>
-                        <textarea placeholder="Special dietary requirements or message (optional)" rows="3"></textarea>
-                        <button type="submit" class="submit-btn">Submit RSVP</button>
-                    </form>
-                </div>
-
-                <div class="footer">
-                    <p>Looking forward to celebrating with you!</p>
-                    <div class="decorative-bottom"></div>
+                <!-- Floral Decorations -->
+                <div class="flower-bottom">
+                    <svg class="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Petals -->
+                        <ellipse cx="100" cy="60" rx="20" ry="35" fill="#d4a5a5" opacity="0.7"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#b8a6d0" opacity="0.7" transform="rotate(72 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#a8d4e0" opacity="0.6" transform="rotate(144 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#b8a6d0" opacity="0.7" transform="rotate(216 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#d4a5a5" opacity="0.7" transform="rotate(288 100 100)"/>
+                        <!-- Center -->
+                        <circle cx="100" cy="100" r="15" fill="#9fb3cc"/>
+                    </svg>
+                    <svg class="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Petals -->
+                        <ellipse cx="100" cy="60" rx="20" ry="35" fill="#a8d4e0" opacity="0.6"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#d4a5a5" opacity="0.7" transform="rotate(72 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#b8a6d0" opacity="0.7" transform="rotate(144 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#a8d4e0" opacity="0.6" transform="rotate(216 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#d4a5a5" opacity="0.7" transform="rotate(288 100 100)"/>
+                        <!-- Center -->
+                        <circle cx="100" cy="100" r="15" fill="#9fb3cc"/>
+                    </svg>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- ARABIC VERSION -->
     <div id="arabic-content" class="language-content">
-        <div class="container">
+        <div class="invitation-container">
             <div class="invitation-card" dir="rtl">
-                <div class="header">
-                    <div class="decorative-top"></div>
-                    <h1 class="title">دعوة زفاف</h1>
-                    <p class="subtitle">يسعدنا دعوتكم للاحتفال بزفافنا</p>
+                <!-- Decorative Corners -->
+                <div class="corner corner-top-left">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20,80 Q30,70 40,60 Q35,50 30,40 Q20,50 10,60 Q5,70 20,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <path d="M40,40 Q50,35 60,30 Q55,25 50,20 Q40,25 30,30 Q35,35 40,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <circle cx="25" cy="35" r="2" fill="#8fa3c4"/>
+                        <circle cx="35" cy="50" r="2.5" fill="#8fa3c4"/>
+                    </svg>
+                </div>
+                <div class="corner corner-top-right">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80,80 Q70,70 60,60 Q65,50 70,40 Q80,50 90,60 Q95,70 80,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <path d="M60,40 Q50,35 40,30 Q45,25 50,20 Q60,25 70,30 Q65,35 60,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                        <circle cx="75" cy="35" r="2" fill="#8fa3c4"/>
+                        <circle cx="65" cy="50" r="2.5" fill="#8fa3c4"/>
+                    </svg>
+                </div>
+                <div class="corner corner-bottom-left">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(180 50 50)">
+                            <path d="M20,80 Q30,70 40,60 Q35,50 30,40 Q20,50 10,60 Q5,70 20,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <path d="M40,40 Q50,35 60,30 Q55,25 50,20 Q40,25 30,30 Q35,35 40,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <circle cx="25" cy="35" r="2" fill="#8fa3c4"/>
+                            <circle cx="35" cy="50" r="2.5" fill="#8fa3c4"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="corner corner-bottom-right">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(180 50 50)">
+                            <path d="M80,80 Q70,70 60,60 Q65,50 70,40 Q80,50 90,60 Q95,70 80,80" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <path d="M60,40 Q50,35 40,30 Q45,25 50,20 Q60,25 70,30 Q65,35 60,40" fill="none" stroke="#8fa3c4" stroke-width="1.5"/>
+                            <circle cx="75" cy="35" r="2" fill="#8fa3c4"/>
+                            <circle cx="65" cy="50" r="2.5" fill="#8fa3c4"/>
+                        </g>
+                    </svg>
                 </div>
 
-                <div class="names-section">
-                    <div class="name-line"></div>
-                    <h2 class="couple-names">ملك و ريهم</h2>
-                    <div class="name-line"></div>
-                </div>
-
-                <div class="details-section">
-                    <div class="detail-item">
-                        <span class="detail-label">📅 التاريخ</span>
-                        <span class="detail-value">الاثنين، 17 أغسطس 2026</span>
+                <!-- Main Content -->
+                <div class="content">
+                    <div class="header-text">
+                        <p class="cordial">يشرفنا دعوتكم لحضور</p>
+                        <p class="ceremony">حفل زفاف</p>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">⏰ الوقت</span>
-                        <span class="detail-value">9:00 مساءً</span>
+
+                    <div class="names-section">
+                        <div class="divider"></div>
+                        <h1 class="groom-name">ملك شاه</h1>
+                        <p class="and">&</p>
+                        <h1 class="bride-name">ريهام ديفي</h1>
+                        <div class="divider"></div>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">📍 المكان</span>
-                        <span class="detail-value">قصر حيفا</span>
+
+                    <div class="date-section">
+                        <div class="date-line"></div>
+                        <div class="date-info">
+                            <p class="date-day">الاثنين</p>
+                            <p class="date-number">17</p>
+                            <p class="date-month">أغسطس</p>
+                            <p class="date-year">2026</p>
+                            <p class="date-time">الساعة 9:00 مساءً</p>
+                        </div>
+                        <div class="date-line"></div>
+                    </div>
+
+                    <div class="location-section">
+                        <p class="venue">قصر حيفا</p>
+                        <a href="https://maps.app.goo.gl/m9n8pzfaNcvFnZn8A" target="_blank" class="map-link">📍 عرض الموقع</a>
+                    </div>
+
+                    <div class="message-section">
+                        <p class="reception-line">يتبعها حفل استقبال</p>
+                    </div>
+
+                    <!-- RSVP Section -->
+                    <div class="rsvp-section">
+                        <h3>تأكيد الحضور</h3>
+                        <p>يرجى تأكيد حضورك بحلول 10 أغسطس 2026</p>
+                        <form id="rsvpFormAr" onsubmit="handleRSVPAr(event)">
+                            <input type="text" placeholder="الاسم الكامل" required>
+                            <input type="email" placeholder="عنوان البريد الإلكتروني" required>
+                            <select required>
+                                <option value="">هل ستحضر؟</option>
+                                <option value="yes">نعم، سأحضر</option>
+                                <option value="no">لا، لا يمكنني الحضور</option>
+                                <option value="maybe">ربما</option>
+                            </select>
+                            <input type="number" placeholder="عدد الضيوف" min="1" max="5" required>
+                            <textarea placeholder="متطلبات غذائية خاصة أو رسالة" rows="3"></textarea>
+                            <button type="submit" class="submit-btn">إرسال التأكيد</button>
+                        </form>
                     </div>
                 </div>
 
-                <div class="map-section">
-                    <a href="https://maps.app.goo.gl/m9n8pzfaNcvFnZn8A" target="_blank" class="map-link">عرض على خريطة جوجل →</a>
-                </div>
-
-                <div class="message-section">
-                    <p class="message">يرجى تشريفنا بحضوركم في حفل زفافنا</p>
-                </div>
-
-                <div class="rsvp-section">
-                    <h3>تأكيد الحضور</h3>
-                    <p>يرجى تأكيد حضورك</p>
-                    <form id="rsvpFormAr" onsubmit="handleRSVPAr(event)">
-                        <input type="text" placeholder="اسمك" required>
-                        <input type="email" placeholder="بريدك الإلكتروني" required>
-                        <select required>
-                            <option value="">هل ستحضر؟</option>
-                            <option value="yes">نعم، سأحضر</option>
-                            <option value="no">لا، لا يمكنني الحضور</option>
-                            <option value="maybe">ربما</option>
-                        </select>
-                        <input type="number" placeholder="عدد الضيوف" min="1" max="5" required>
-                        <textarea placeholder="متطلبات غذائية خاصة أو رسالة (اختياري)" rows="3"></textarea>
-                        <button type="submit" class="submit-btn">إرسال التأكيد</button>
-                    </form>
-                </div>
-
-                <div class="footer">
-                    <p>نتطلع للاحتفال معكم!</p>
-                    <div class="decorative-bottom"></div>
+                <!-- Floral Decorations -->
+                <div class="flower-bottom">
+                    <svg class="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Petals -->
+                        <ellipse cx="100" cy="60" rx="20" ry="35" fill="#d4a5a5" opacity="0.7"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#b8a6d0" opacity="0.7" transform="rotate(72 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#a8d4e0" opacity="0.6" transform="rotate(144 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#b8a6d0" opacity="0.7" transform="rotate(216 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#d4a5a5" opacity="0.7" transform="rotate(288 100 100)"/>
+                        <!-- Center -->
+                        <circle cx="100" cy="100" r="15" fill="#9fb3cc"/>
+                    </svg>
+                    <svg class="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Petals -->
+                        <ellipse cx="100" cy="60" rx="20" ry="35" fill="#a8d4e0" opacity="0.6"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#d4a5a5" opacity="0.7" transform="rotate(72 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#b8a6d0" opacity="0.7" transform="rotate(144 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#a8d4e0" opacity="0.6" transform="rotate(216 100 100)"/>
+                        <ellipse cx="140" cy="80" rx="20" ry="35" fill="#d4a5a5" opacity="0.7" transform="rotate(288 100 100)"/>
+                        <!-- Center -->
+                        <circle cx="100" cy="100" r="15" fill="#9fb3cc"/>
+                    </svg>
                 </div>
             </div>
         </div>

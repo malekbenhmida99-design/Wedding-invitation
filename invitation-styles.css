@@ -349,6 +349,22 @@ body {
     text-transform: uppercase;
 }
 
+.invitation-card[dir="rtl"] .cordial,
+.invitation-card[dir="rtl"] .ceremony {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.invitation-card[dir="rtl"] .cordial {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.invitation-card[dir="rtl"] .ceremony {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 .names-section {
     text-align: center;
     margin: 40px 0;
@@ -370,6 +386,13 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
     font-style: italic;
+}
+
+.invitation-card[dir="rtl"] .couple-names {
+    font-size: 52px;
+    font-style: normal;
+    letter-spacing: 0;
+    line-height: 1.2;
 }
 
 .date-section {
@@ -424,6 +447,13 @@ body {
     font-weight: 600;
 }
 
+.invitation-card[dir="rtl"] .date-day,
+.invitation-card[dir="rtl"] .date-month,
+.invitation-card[dir="rtl"] .date-time {
+    letter-spacing: 0;
+    text-transform: none;
+}
+
 .location-section {
     text-align: center;
     margin: 35px 0 22px;
@@ -435,6 +465,10 @@ body {
     font-weight: 400;
     letter-spacing: 0.5px;
     margin-bottom: 12px;
+}
+
+.invitation-card[dir="rtl"] .venue {
+    letter-spacing: 0;
 }
 
 .map-link {
@@ -553,7 +587,8 @@ body {
         padding: 40px 25px 70px 25px;
     }
 
-    .couple-names {
+    .couple-names,
+    .invitation-card[dir="rtl"] .couple-names {
         font-size: 40px;
     }
 
@@ -561,11 +596,13 @@ body {
         font-size: 48px;
     }
 
-    .cordial {
+    .cordial,
+    .invitation-card[dir="rtl"] .cordial {
         font-size: 14px;
     }
 
-    .ceremony {
+    .ceremony,
+    .invitation-card[dir="rtl"] .ceremony {
         font-size: 12px;
     }
 
@@ -628,7 +665,8 @@ body {
         padding: 30px 15px 60px 15px;
     }
 
-    .couple-names {
+    .couple-names,
+    .invitation-card[dir="rtl"] .couple-names {
         font-size: 32px;
     }
 

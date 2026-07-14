@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malek & Rihem Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-toggle">
+        <button id="langBtn" onclick="toggleLanguage()">العربية | English</button>
+    </div>
+
+    <div id="english-content" class="language-content active">
+        <div class="container">
+            <div class="invitation-card">
+                <div class="header">
+                    <div class="decorative-top"></div>
+                    <h1 class="title">Wedding Invitation</h1>
+                    <p class="subtitle">We are delighted to invite you to celebrate our wedding</p>
+                </div>
+
+                <div class="names-section">
+                    <div class="name-line"></div>
+                    <h2 class="couple-names">Malek & Rihem</h2>
+                    <div class="name-line"></div>
+                </div>
+
+                <div class="details-section">
+                    <div class="detail-item">
+                        <span class="detail-label">📅 Date</span>
+                        <span class="detail-value">Monday, August 17, 2026</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⏰ Time</span>
+                        <span class="detail-value">9:00 PM</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">📍 Location</span>
+                        <span class="detail-value">Haifa Palace</span>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <a href="https://maps.app.goo.gl/m9n8pzfaNcvFnZn8A" target="_blank" class="map-link">View on Google Maps →</a>
+                </div>
+
+                <div class="message-section">
+                    <p class="message">Your presence is kindly requested at our wedding celebration</p>
+                </div>
+
+                <div class="rsvp-section">
+                    <h3>RSVP</h3>
+                    <p>Please confirm your attendance</p>
+                    <form id="rsvpForm" onsubmit="handleRSVP(event)">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <select required>
+                            <option value="">Will you attend?</option>
+                            <option value="yes">Yes, I will attend</option>
+                            <option value="no">No, I cannot attend</option>
+                            <option value="maybe">Maybe</option>
+                        </select>
+                        <input type="number" placeholder="Number of guests" min="1" max="5" required>
+                        <textarea placeholder="Special dietary requirements or message (optional)" rows="3"></textarea>
+                        <button type="submit" class="submit-btn">Submit RSVP</button>
+                    </form>
+                </div>
+
+                <div class="footer">
+                    <p>Looking forward to celebrating with you!</p>
+                    <div class="decorative-bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="arabic-content" class="language-content">
+        <div class="container">
+            <div class="invitation-card" dir="rtl">
+                <div class="header">
+                    <div class="decorative-top"></div>
+                    <h1 class="title">دعوة زفاف</h1>
+                    <p class="subtitle">يسعدنا دعوتكم للاحتفال بزفافنا</p>
+                </div>
+
+                <div class="names-section">
+                    <div class="name-line"></div>
+                    <h2 class="couple-names">ملك و ريهم</h2>
+                    <div class="name-line"></div>
+                </div>
+
+                <div class="details-section">
+                    <div class="detail-item">
+                        <span class="detail-label">📅 التاريخ</span>
+                        <span class="detail-value">الاثنين، 17 أغسطس 2026</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⏰ الوقت</span>
+                        <span class="detail-value">9:00 مساءً</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">📍 المكان</span>
+                        <span class="detail-value">قصر حيفا</span>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <a href="https://maps.app.goo.gl/m9n8pzfaNcvFnZn8A" target="_blank" class="map-link">عرض على خريطة جوجل →</a>
+                </div>
+
+                <div class="message-section">
+                    <p class="message">يرجى تشريفنا بحضوركم في حفل زفافنا</p>
+                </div>
+
+                <div class="rsvp-section">
+                    <h3>تأكيد الحضور</h3>
+                    <p>يرجى تأكيد حضورك</p>
+                    <form id="rsvpFormAr" onsubmit="handleRSVPAr(event)">
+                        <input type="text" placeholder="اسمك" required>
+                        <input type="email" placeholder="بريدك الإلكتروني" required>
+                        <select required>
+                            <option value="">هل ستحضر؟</option>
+                            <option value="yes">نعم، سأحضر</option>
+                            <option value="no">لا، لا يمكنني الحضور</option>
+                            <option value="maybe">ربما</option>
+                        </select>
+                        <input type="number" placeholder="عدد الضيوف" min="1" max="5" required>
+                        <textarea placeholder="متطلبات غذائية خاصة أو رسالة (اختياري)" rows="3"></textarea>
+                        <button type="submit" class="submit-btn">إرسال التأكيد</button>
+                    </form>
+                </div>
+
+                <div class="footer">
+                    <p>نتطلع للاحتفال معكم!</p>
+                    <div class="decorative-bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

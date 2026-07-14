@@ -1,32 +1,23 @@
-function openEnvelope() {
-    const envelopePage = document.getElementById('envelope-page');
-    const invitationPage = document.getElementById('invitation-page');
-    
-    envelopePage.classList.remove('active');
-    invitationPage.classList.add('active');
+// Check selected language
+const selectedLanguage = localStorage.getItem('selectedLanguage') || 'english';
+
+if (selectedLanguage === 'arabic') {
+    document.documentElement.dir = 'rtl';
+    document.documentElement.lang = 'ar';
+    updateToArabic();
 }
 
-function closeInvitation() {
-    const envelopePage = document.getElementById('envelope-page');
-    const invitationPage = document.getElementById('invitation-page');
-    
-    invitationPage.classList.remove('active');
-    envelopePage.classList.add('active');
+function updateToArabic() {
+    document.getElementById('envelope-text').innerHTML = `
+        <h1>دعوة الزفاف</h1>
+        <p>مالك و ريهام</p>
+    `;
+    document.getElementById('stamp-text').innerHTML = `
+        <p>اضغط</p>
+        <p>لفتح</p>
+    `;
 }
 
-function toggleLanguage() {
-    const englishContent = document.getElementById('english-content');
-    const arabicContent = document.getElementById('arabic-content');
-    const langBtn = document.getElementById('langBtn');
-
-    englishContent.classList.toggle('active');
-    arabicContent.classList.toggle('active');
-
-    if (englishContent.classList.contains('active')) {
-        langBtn.textContent = 'العربية | English';
-        document.documentElement.lang = 'en';
-    } else {
-        langBtn.textContent = 'العربية | English';
-        document.documentElement.lang = 'ar';
-    }
+function openInvitation() {
+    window.location.href = 'invitation.html';
 }

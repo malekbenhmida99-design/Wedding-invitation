@@ -29,12 +29,12 @@ function updateLanguageUI() {
 
     if (envelopeText) {
         envelopeText.innerHTML = isArabic
-            ? '<h1>دعوة زفاف</h1><p class="envelope-couple-names">ر و م</p>'
-            : '<h1>Wedding Invitation</h1><p class="envelope-couple-names">M & R</p>';
+            ? '<h1>دعوة زفاف</h1><p class="envelope-couple-names">مالك و ريهام</p>'
+            : '<h1>Wedding Invitation</h1><p class="envelope-couple-names">MALEK & RIHEM</p>';
     }
 
     if (sealMonogram) {
-        sealMonogram.textContent = isArabic ? 'ر و م' : 'M & R';
+        sealMonogram.textContent = isArabic ? 'م و ر' : 'M & R';
     }
 }
 

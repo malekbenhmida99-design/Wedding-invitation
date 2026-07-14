@@ -125,7 +125,6 @@ body {
     font-style: italic;
 }
 
-/* Stamp */
 .stamp {
     position: absolute;
     width: 90px;
@@ -174,7 +173,6 @@ body {
     font-style: normal;
 }
 
-/* ============ INVITATION SECTION ============ */
 .invitation-section {
     display: none;
     width: 100%;
@@ -189,12 +187,17 @@ body {
 }
 
 .invitation-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     max-width: 850px;
     margin: 0 auto 20px;
     padding: 10px 0;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .back-btn {
@@ -212,6 +215,39 @@ body {
 .back-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(17, 11, 9, 0.35);
+}
+
+.language-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 999px;
+    background: rgba(255, 248, 239, 0.12);
+    border: 1px solid rgba(198, 162, 122, 0.35);
+    backdrop-filter: blur(6px);
+}
+
+.lang-toggle-btn {
+    border: none;
+    background: transparent;
+    color: #f3e8dc;
+    padding: 10px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.lang-toggle-btn.active {
+    background: linear-gradient(135deg, #c6a27a 0%, #a67c7c 100%);
+    color: #fffaf4;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.lang-toggle-btn:hover:not(.active) {
+    background: rgba(255, 248, 239, 0.12);
 }
 
 .language-content {
@@ -242,7 +278,6 @@ body {
     border: 1px solid rgba(198, 162, 122, 0.35);
 }
 
-/* Decorative corners */
 .decorative-corner {
     position: absolute;
     width: 120px;
@@ -263,23 +298,10 @@ body {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M100 100 Q90 90 80 80 Q70 70 60 60 Q50 50 40 40 Q30 30 20 25' fill='none' stroke='%23a67c7c' stroke-width='2'/%3E%3Cpath d='M95 95 Q85 85 75 75 Q65 65 55 55' fill='none' stroke='%23c6a27a' stroke-width='1.5'/%3E%3Ccircle cx='45' cy='45' r='4' fill='%23c6a27a'/%3E%3Ccircle cx='32' cy='33' r='3' fill='%23a67c7c'/%3E%3C/svg%3E") no-repeat center/contain;
 }
 
-.decorative-corner.top-left {
-    top: -20px;
-}
-
-.decorative-corner.top-right {
-    top: -20px;
-}
-
-.decorative-corner.bottom-left {
-    bottom: -20px;
-    transform: scaleY(-1);
-}
-
-.decorative-corner.bottom-right {
-    bottom: -20px;
-    transform: scaleX(-1) scaleY(-1);
-}
+.decorative-corner.top-left { top: -20px; }
+.decorative-corner.top-right { top: -20px; }
+.decorative-corner.bottom-left { bottom: -20px; transform: scaleY(-1); }
+.decorative-corner.bottom-right { bottom: -20px; transform: scaleX(-1) scaleY(-1); }
 
 .content {
     position: relative;
@@ -440,13 +462,8 @@ body {
     height: 150px;
 }
 
-.flower-group.left {
-    left: -30px;
-}
-
-.flower-group.right {
-    right: -30px;
-}
+.flower-group.left { left: -30px; }
+.flower-group.right { right: -30px; }
 
 .flower-large {
     position: absolute;
@@ -472,6 +489,15 @@ body {
     .envelope {
         width: 320px;
         height: 240px;
+    }
+
+    .top-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .language-toggle {
+        justify-content: center;
     }
 
     .invitation-card {
@@ -518,6 +544,11 @@ body {
     .envelope {
         width: 280px;
         height: 210px;
+    }
+
+    .lang-toggle-btn {
+        padding: 9px 14px;
+        font-size: 13px;
     }
 
     .invitation-card {

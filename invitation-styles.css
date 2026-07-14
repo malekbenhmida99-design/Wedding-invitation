@@ -102,23 +102,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 38px 20px 24px;
     z-index: 2;
 }
 
 .envelope-text {
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
+    padding-right: 104px;
     z-index: 3;
     position: relative;
+    width: 100%;
 }
 
 .envelope-text h1 {
-    font-size: 30px;
+    font-size: 28px;
     color: #4a372f;
     font-weight: 300;
-    letter-spacing: 2.5px;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    line-height: 1.15;
 }
 
 .envelope-text p {
@@ -127,9 +130,9 @@ body {
 }
 
 .envelope-couple-names {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 400;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     font-style: normal;
     text-transform: uppercase;
 }
@@ -510,7 +513,7 @@ body {
     .seal-stamp {
         width: 78px;
         height: 78px;
-        right: 20px;
+        right: 18px;
         top: 18px;
     }
 
@@ -518,13 +521,21 @@ body {
         font-size: 15px;
     }
 
+    .envelope-body {
+        padding: 34px 18px 20px;
+    }
+
+    .envelope-text {
+        padding-right: 88px;
+    }
+
     .envelope-text h1 {
-        font-size: 24px;
+        font-size: 23px;
     }
 
     .envelope-couple-names {
-        font-size: 22px;
-        letter-spacing: 3px;
+        font-size: 19px;
+        letter-spacing: 2px;
     }
 
     .top-controls {
@@ -584,14 +595,23 @@ body {
     }
 
     .seal-stamp {
-        width: 68px;
-        height: 68px;
-        right: 16px;
-        top: 16px;
+        width: 64px;
+        height: 64px;
+        right: 14px;
+        top: 14px;
     }
 
     .seal-monogram {
-        font-size: 13px;
+        font-size: 12px;
+    }
+
+    .envelope-body {
+        padding: 30px 14px 18px;
+    }
+
+    .envelope-text {
+        padding-right: 72px;
+        margin-bottom: 4px;
     }
 
     .lang-toggle-btn {
@@ -616,11 +636,12 @@ body {
     }
 
     .envelope-text h1 {
-        font-size: 20px;
+        font-size: 18px;
+        letter-spacing: 1px;
     }
 
     .envelope-couple-names {
-        font-size: 18px;
-        letter-spacing: 2px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
     }
 }

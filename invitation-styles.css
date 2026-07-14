@@ -242,41 +242,43 @@ body {
     border: 1px solid rgba(198, 162, 122, 0.35);
 }
 
+/* Decorative corners */
 .decorative-corner {
     position: absolute;
     width: 120px;
     height: 120px;
     opacity: 0.45;
+    pointer-events: none;
+}
+
+.decorative-corner.top-left,
+.decorative-corner.bottom-left {
+    left: -20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M20 100 Q30 90 40 80 Q50 70 60 60 Q70 50 80 40 Q90 30 100 25' fill='none' stroke='%23a67c7c' stroke-width='2'/%3E%3Cpath d='M25 95 Q35 85 45 75 Q55 65 65 55' fill='none' stroke='%23c6a27a' stroke-width='1.5'/%3E%3Ccircle cx='75' cy='45' r='4' fill='%23c6a27a'/%3E%3Ccircle cx='88' cy='33' r='3' fill='%23a67c7c'/%3E%3C/svg%3E") no-repeat center/contain;
+}
+
+.decorative-corner.top-right,
+.decorative-corner.bottom-right {
+    right: -20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M100 100 Q90 90 80 80 Q70 70 60 60 Q50 50 40 40 Q30 30 20 25' fill='none' stroke='%23a67c7c' stroke-width='2'/%3E%3Cpath d='M95 95 Q85 85 75 75 Q65 65 55 55' fill='none' stroke='%23c6a27a' stroke-width='1.5'/%3E%3Ccircle cx='45' cy='45' r='4' fill='%23c6a27a'/%3E%3Ccircle cx='32' cy='33' r='3' fill='%23a67c7c'/%3E%3C/svg%3E") no-repeat center/contain;
 }
 
 .decorative-corner.top-left {
     top: -20px;
-    left: -20px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M20,100 Q30,90 40,80 Q50,70 60,60 Q70,50 80,40 Q90,30 100,25" fill="none" stroke="%23a67c7c" stroke-width="2"/><path d="M25,95 Q35,85 45,75 Q55,65 65,55" fill="none" stroke="%23c6a27a" stroke-width="1.5"/><circle cx="75" cy="45" r="4" fill="%23c6a27a"/><circle cx="88" cy="33" r="3" fill="%23a67c7c"/></svg>');
-    background-size: contain;
 }
 
 .decorative-corner.top-right {
     top: -20px;
-    right: -20px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M100,100 Q90,90 80,80 Q70,70 60,60 Q50,50 40,40 Q30,30 20,25" fill="none" stroke="%23a67c7c" stroke-width="2"/><path d="M95,95 Q85,85 75,75 Q65,65 55,55" fill="none" stroke="%23c6a27a" stroke-width="1.5"/><circle cx="45" cy="45" r="4" fill="%23c6a27a"/><circle cx="32" cy="33" r="3" fill="%23a67c7c"/></svg>');
-    background-size: contain;
 }
 
 .decorative-corner.bottom-left {
     bottom: -20px;
-    left: -20px;
     transform: scaleY(-1);
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M20,100 Q30,90 40,80 Q50,70 60,60 Q70,50 80,40 Q90,30 100,25" fill="none" stroke="%23a67c7c" stroke-width="2"/><path d="M25,95 Q35,85 45,75 Q55,65 65,55" fill="none" stroke="%23c6a27a" stroke-width="1.5"/><circle cx="75" cy="45" r="4" fill="%23c6a27a"/><circle cx="88" cy="33" r="3" fill="%23a67c7c"/></svg>');
-    background-size: contain;
 }
 
 .decorative-corner.bottom-right {
     bottom: -20px;
-    right: -20px;
     transform: scaleX(-1) scaleY(-1);
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M100,100 Q90,90 80,80 Q70,70 60,60 Q50,50 40,40 Q30,30 20,25" fill="none" stroke="%23a67c7c" stroke-width="2"/><path d="M95,95 Q85,85 75,75 Q65,65 55,55" fill="none" stroke="%23c6a27a" stroke-width="1.5"/><circle cx="45" cy="45" r="4" fill="%23c6a27a"/><circle cx="32" cy="33" r="3" fill="%23a67c7c"/></svg>');
-    background-size: contain;
 }
 
 .content {

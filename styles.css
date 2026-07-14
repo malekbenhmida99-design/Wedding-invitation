@@ -245,85 +245,6 @@ body {
     font-style: italic;
 }
 
-.rsvp-section {
-    background: linear-gradient(135deg, rgba(143, 163, 196, 0.08) 0%, rgba(212, 165, 165, 0.08) 100%);
-    padding: 35px;
-    border-radius: 10px;
-    margin-top: 45px;
-    border: 1px solid rgba(201, 181, 160, 0.15);
-}
-
-.rsvp-section h3 {
-    text-align: center;
-    font-size: 16px;
-    color: #8fa3c4;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.rsvp-section > p {
-    text-align: center;
-    font-size: 12px;
-    color: #9fa9b8;
-    margin-bottom: 25px;
-}
-
-.rsvp-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.rsvp-section input,
-.rsvp-section select,
-.rsvp-section textarea {
-    padding: 12px 15px;
-    border: 1px solid #d4a5a5;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    color: #5a5a5a;
-    background: rgba(255, 255, 255, 0.85);
-    transition: all 0.3s ease;
-}
-
-.rsvp-section input::placeholder,
-.rsvp-section textarea::placeholder {
-    color: #c0c0c0;
-}
-
-.rsvp-section input:focus,
-.rsvp-section select:focus,
-.rsvp-section textarea:focus {
-    outline: none;
-    border-color: #8fa3c4;
-    background: white;
-    box-shadow: 0 0 10px rgba(143, 163, 196, 0.2);
-}
-
-.submit-btn {
-    background: linear-gradient(135deg, #8fa3c4 0%, #7a8db3 100%);
-    color: white;
-    border: none;
-    padding: 13px;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 13px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 10px;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(143, 163, 196, 0.35);
-}
-
 /* Floral Decorations */
 .floral-bottom {
     position: absolute;
@@ -389,10 +310,6 @@ body {
 
     .ceremony {
         font-size: 12px;
-    }
-
-    .rsvp-section {
-        padding: 25px;
     }
 
     .venue {

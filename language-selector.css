@@ -6,12 +6,12 @@
 
 body {
     font-family: 'Cormorant Garamond', serif;
-    background: linear-gradient(135deg, #f5f3f0 0%, #e8e4df 100%);
+    background: linear-gradient(135deg, #4f4039 0%, #2f2522 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #5a5a5a;
+    color: #f3e8dc;
 }
 
 .language-selector-container {
@@ -24,12 +24,13 @@ body {
 }
 
 .selector-card {
-    background: #fcfbf9;
-    border-radius: 20px;
+    background: linear-gradient(180deg, #f6efe6 0%, #ede2d3 100%);
+    border-radius: 24px;
     padding: 60px 50px;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3);
     text-align: center;
     max-width: 500px;
+    border: 1px solid rgba(198, 162, 122, 0.35);
     animation: slideIn 0.6s ease-out;
 }
 
@@ -46,7 +47,7 @@ body {
 
 .selector-card h1 {
     font-size: 48px;
-    color: #8fa3c4;
+    color: #4a372f;
     font-weight: 300;
     letter-spacing: 2px;
     margin-bottom: 15px;
@@ -54,7 +55,7 @@ body {
 
 .selector-card p {
     font-size: 16px;
-    color: #9fa9b8;
+    color: #7a6457;
     margin-bottom: 50px;
     font-style: italic;
 }
@@ -69,29 +70,27 @@ body {
     flex: 1;
     max-width: 150px;
     padding: 40px 30px;
-    border: 2px solid #d4a5a5;
-    border-radius: 15px;
-    background: white;
+    border: 1px solid #c6a27a;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #fffaf4 0%, #f2e6d7 100%);
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    box-shadow: 0 12px 30px rgba(79, 64, 57, 0.12);
 }
 
 .lang-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(212, 165, 165, 0.3);
-    border-color: #8fa3c4;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(47, 37, 34, 0.22);
+    border-color: #8b6a57;
 }
 
-.lang-btn.english:hover {
-    background: linear-gradient(135deg, rgba(143, 163, 196, 0.1) 0%, rgba(212, 165, 165, 0.05) 100%);
-}
-
+.lang-btn.english:hover,
 .lang-btn.arabic:hover {
-    background: linear-gradient(135deg, rgba(143, 163, 196, 0.1) 0%, rgba(212, 165, 165, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(198, 162, 122, 0.18) 0%, rgba(166, 124, 124, 0.12) 100%);
 }
 
 .flag {
@@ -101,7 +100,7 @@ body {
 
 .lang-name {
     font-size: 18px;
-    color: #5a5a5a;
+    color: #4a372f;
     font-weight: 600;
     letter-spacing: 1px;
 }

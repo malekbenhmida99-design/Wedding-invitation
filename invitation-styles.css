@@ -108,23 +108,30 @@ body {
 
 .envelope-text {
     text-align: center;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     z-index: 3;
     position: relative;
 }
 
 .envelope-text h1 {
-    font-size: 28px;
+    font-size: 30px;
     color: #4a372f;
     font-weight: 300;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+    letter-spacing: 2.5px;
+    margin-bottom: 10px;
 }
 
 .envelope-text p {
-    font-size: 18px;
     color: #8b6a57;
     font-style: italic;
+}
+
+.envelope-couple-names {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-style: normal;
+    text-transform: uppercase;
 }
 
 .seal-stamp {
@@ -511,6 +518,15 @@ body {
         font-size: 15px;
     }
 
+    .envelope-text h1 {
+        font-size: 24px;
+    }
+
+    .envelope-couple-names {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
     .top-controls {
         flex-direction: column;
         align-items: stretch;
@@ -600,10 +616,11 @@ body {
     }
 
     .envelope-text h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
-    .envelope-text p {
-        font-size: 16px;
+    .envelope-couple-names {
+        font-size: 18px;
+        letter-spacing: 2px;
     }
 }

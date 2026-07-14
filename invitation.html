@@ -20,12 +20,11 @@
                             <h1>Wedding Invitation</h1>
                             <p>Malek & Rihem</p>
                         </div>
-                        <div class="stamp" onclick="openInvitation()">
-                            <div class="stamp-content" id="stamp-text">
-                                <p>CLICK</p>
-                                <p>TO OPEN</p>
-                            </div>
-                        </div>
+                        <button class="seal-stamp" type="button" onclick="openInvitation()" aria-label="Open invitation">
+                            <span class="seal-inner">
+                                <span class="seal-monogram">M&nbsp;&amp;&nbsp;R</span>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -44,7 +43,6 @@
             </div>
         </div>
 
-        <!-- ENGLISH VERSION -->
         <div id="english-content" class="language-content active">
             <div class="invitation-container">
                 <div class="invitation-card">
@@ -125,7 +123,6 @@
             </div>
         </div>
 
-        <!-- ARABIC VERSION -->
         <div id="arabic-content" class="language-content">
             <div class="invitation-container">
                 <div class="invitation-card" dir="rtl">

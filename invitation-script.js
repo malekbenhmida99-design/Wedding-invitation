@@ -1,4 +1,3 @@
-// Check selected language on page load
 let selectedLanguage = localStorage.getItem('selectedLanguage') || 'english';
 
 function updateLanguageUI() {
@@ -7,7 +6,6 @@ function updateLanguageUI() {
     const englishToggle = document.getElementById('english-toggle');
     const arabicToggle = document.getElementById('arabic-toggle');
     const envelopeText = document.getElementById('envelope-text');
-    const stampText = document.getElementById('stamp-text');
 
     if (selectedLanguage === 'arabic') {
         document.documentElement.dir = 'rtl';
@@ -20,10 +18,6 @@ function updateLanguageUI() {
             <h1>دعوة الزفاف</h1>
             <p>مالك و ريهام</p>
         `;
-        stampText.innerHTML = `
-            <p>اضغط</p>
-            <p>لفتح</p>
-        `;
     } else {
         document.documentElement.dir = 'ltr';
         document.documentElement.lang = 'en';
@@ -34,10 +28,6 @@ function updateLanguageUI() {
         envelopeText.innerHTML = `
             <h1>Wedding Invitation</h1>
             <p>Malek & Rihem</p>
-        `;
-        stampText.innerHTML = `
-            <p>CLICK</p>
-            <p>TO OPEN</p>
         `;
     }
 }

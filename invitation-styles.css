@@ -11,7 +11,6 @@ body {
     color: #4a372f;
 }
 
-/* ============ ENVELOPE SECTION ============ */
 .envelope-section {
     display: none;
     width: 100%;
@@ -27,12 +26,8 @@ body {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .envelope-container {
@@ -56,20 +51,14 @@ body {
 
 .envelope-back {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: linear-gradient(to right, #d8c0a5, #c4a484);
     z-index: 1;
 }
 
 .envelope-front {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -101,12 +90,11 @@ body {
     justify-content: center;
     padding: 30px 20px;
     z-index: 2;
-    box-sizing: border-box;
 }
 
 .envelope-text {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     z-index: 3;
     position: relative;
 }
@@ -125,52 +113,59 @@ body {
     font-style: italic;
 }
 
-.stamp {
+.seal-stamp {
     position: absolute;
-    width: 90px;
-    height: 110px;
-    background: linear-gradient(135deg, #a67c7c 0%, #c6a27a 100%);
-    border: 3px dashed #f3e8dc;
-    border-radius: 8px;
+    right: 28px;
+    top: 24px;
+    width: 92px;
+    height: 92px;
+    border: none;
+    background: transparent;
     cursor: pointer;
+    z-index: 5;
+    padding: 0;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    animation: seal-float 2.2s ease-in-out infinite;
+}
+
+.seal-stamp:hover {
+    transform: scale(1.08);
+}
+
+.seal-inner {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotate(-15deg);
-    right: 20px;
-    top: 20px;
-    z-index: 4;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 18px rgba(64, 39, 34, 0.28);
-    animation: stamp-hover 2s infinite;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #d8b38d 0%, #b8845f 55%, #8e5f46 100%);
+    border: 4px solid rgba(255, 244, 231, 0.75);
+    box-shadow: 0 10px 24px rgba(43, 25, 20, 0.35), inset 0 2px 8px rgba(255, 255, 255, 0.25);
+    position: relative;
 }
 
-.stamp:hover {
-    transform: rotate(-15deg) scale(1.1);
-    box-shadow: 0 10px 24px rgba(64, 39, 34, 0.38);
+.seal-inner::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 245, 235, 0.55);
 }
 
-@keyframes stamp-hover {
-    0%, 100% {
-        transform: rotate(-15deg) translateY(0);
-    }
-    50% {
-        transform: rotate(-15deg) translateY(-5px);
-    }
-}
-
-.stamp-content {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
+.seal-monogram {
+    color: #fff8ef;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 
-.stamp-content p {
-    margin: 2px 0;
-    line-height: 1.2;
-    font-style: normal;
+@keyframes seal-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
 }
 
 .invitation-section {
@@ -491,6 +486,17 @@ body {
         height: 240px;
     }
 
+    .seal-stamp {
+        width: 78px;
+        height: 78px;
+        right: 20px;
+        top: 18px;
+    }
+
+    .seal-monogram {
+        font-size: 15px;
+    }
+
     .top-controls {
         flex-direction: column;
         align-items: stretch;
@@ -544,6 +550,17 @@ body {
     .envelope {
         width: 280px;
         height: 210px;
+    }
+
+    .seal-stamp {
+        width: 68px;
+        height: 68px;
+        right: 16px;
+        top: 16px;
+    }
+
+    .seal-monogram {
+        font-size: 13px;
     }
 
     .lang-toggle-btn {
